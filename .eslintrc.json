@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "plugins": [
+    "json-format",
+    "perfectionist"
+  ],
+  "settings": {
+    "json/json-with-comments-files": []
+  },
+  "extends": [
+    "plugin:sonarjs/recommended",
+    "plugin:unicorn/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "no-unused-vars": "off",
+    "unicorn/prevent-abbreviations": [
+      "off"
+    ],
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        "type": "natural",
+        "order": "asc"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.tsx",
+        "*.ts"
+      ],
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
+}
